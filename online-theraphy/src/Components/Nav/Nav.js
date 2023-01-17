@@ -1,10 +1,9 @@
 import React, { useState} from "react";
-
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "./img/img1.jpg";
+import logo from "./img/psyche.png";
 import "./Nav.css";
 
-const Navbar = () => {
+function Navbar(){
   //setting mobile nav
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -24,6 +23,9 @@ const Navbar = () => {
   const closeMenu = () => setClick(false);
 
   return (
+
+
+    
     <div className={color ? "header header-bg" : "header"}>
       <nav className="navbar">
         <a href="/" className="logo">
@@ -43,22 +45,22 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#psychologists" onClick={closeMenu}>
+            <a href="/psychologists" onClick={closeMenu}>
               Psychologists
             </a>
           </li>
           <li className="nav-item">
-            <a href="#tests" onClick={closeMenu}>
+            <a href="/tests" onClick={closeMenu}>
               Tests
             </a>
           </li>
           <li className="nav-item">
-            <a href="#login" onClick={closeMenu}>
+            <a href="/login" onClick={closeMenu}>
               Log In
             </a>
           </li>
           <li className="nav-item">
-            <a href="#signin" onClick={closeMenu}>
+            <a href="/signin" onClick={closeMenu}>
               Sign In
             </a>
           </li>
