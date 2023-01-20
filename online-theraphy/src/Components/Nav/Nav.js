@@ -1,9 +1,9 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "./img/psyche.png";
+import logo from "./img/psychelogo.png";
 import "./Nav.css";
 
-function Navbar(){
+function Navbar() {
   //setting mobile nav
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -23,12 +23,9 @@ function Navbar(){
   const closeMenu = () => setClick(false);
 
   return (
-
-
-    
     <div className={color ? "header header-bg" : "header"}>
       <nav className="navbar">
-        <a href="/" className="logo">
+        <a href="/home" className="logo">
           <img src={logo} alt="logo" />
         </a>
         <div className="hamburger" onClick={handleClick}>
@@ -39,7 +36,7 @@ function Navbar(){
           )}
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
+          <li className="nav-item" style={{ marginLeft:50}}>
             <a href="/aboutus" onClick={closeMenu}>
               About Us
             </a>
@@ -55,19 +52,24 @@ function Navbar(){
             </a>
           </li>
           <li className="nav-item">
+            <a href="/faq" onClick={closeMenu}>
+              F.A.Q.
+            </a>
+          </li>
+          <span className="nav-item" style={{ marginLeft:500}}>
             <a href="/login" onClick={closeMenu}>
               Log In
             </a>
-          </li>
-          <li className="nav-item">
+          </span>
+          <span className="nav-item">
             <a href="/signin" onClick={closeMenu}>
               Sign In
             </a>
-          </li>
+          </span>
         </ul>
       </nav>
     </div>
   );
-};
+}
 
 export default Navbar;

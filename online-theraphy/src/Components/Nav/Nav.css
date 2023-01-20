@@ -15,16 +15,14 @@
 
 .header .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  max-width: 1240px;
-  margin: auto;
   height: 100%;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .header .nav-menu a {
-  color: #ffffff;
+  color: #135187;
 }
 
 .header .navbar img {
@@ -43,7 +41,7 @@
 
 .header .nav-item a:hover {
   padding-bottom: 12px;
-  border-bottom: 3px solid var(--secondary-color);
+  color: rgb(50, 36, 96);
 }
 
 .hamburger {
@@ -89,4 +87,4 @@
     width: 150px;
   }
 }
- /**/
+/**/
